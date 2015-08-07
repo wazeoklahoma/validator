@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name                WME Validator Localization for Oklahoma
 // @namespace           https://greasyfork.org/en/scripts/10930-wme-validator-oklahoma-localization
-// @version             1.0.15
+// @version             1.0.16
 // @author              turnertr
 // @description         This script localizes WME Validator for United States/Oklahoma. You also need main package (WME Validator) installed.
 // @match               https://editor-beta.waze.com/*editor/*
@@ -14,6 +14,7 @@
 
 // CHANGELOG
 // 1.1.15 -- Imported to github  wazeoklahoma/validator
+// 1.1.16 -- Enabled some options that were enabled in most states.  Railroads, etc.
 
 
 /*
@@ -44,7 +45,7 @@ window.WME_Validator_United_States = {
   ".country": "United States/Oklahoma",
   ".codeISO": "US",
   ".author": "turnertr",
-  ".updated": "2015-07-12",
+  ".updated": "2015-08-06",
   ".link": "https://greasyfork.org/en/scripts/10930-wme-validator-oklahoma-localization",
  
   // 27: no city name on railroad
