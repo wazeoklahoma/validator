@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name                WME Validator Localization for Oklahoma
 // @namespace           https://greasyfork.org/en/scripts/10930-wme-validator-oklahoma-localization
-// @version             1.0.13
+// @version             1.0.14
 // @author              turnertr
 // @description         This script localizes WME Validator for United States/Oklahoma. You also need main package (WME Validator) installed.
 // @match               https://editor-beta.waze.com/*editor/*
