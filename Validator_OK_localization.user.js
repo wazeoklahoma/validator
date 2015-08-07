@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name                WME Validator Localization for Oklahoma
 // @namespace           https://greasyfork.org/en/scripts/10930-wme-validator-oklahoma-localization
-// @version             1.0.17
+// @version             1.0.18
 // @author              turnertr,dBsooner
 // @description         This script localizes WME Validator for United States/Oklahoma. You also need main package (WME Validator) installed.
 // @match               https://editor-beta.waze.com/*editor/*
@@ -16,6 +16,7 @@
 // 1.1.15 -- Imported to github  wazeoklahoma/validator
 // 1.1.16 -- Enabled some options that were enabled in most states.  Railroads, etc.
 // 1.1.17 -- Merged dBsooner's copy with master
+// 1.1.18 -- Removed extraneous 128 check.
 
 // TODO:
 // Evaluate Exit detection to make sure it is grabbing all, similar to what dBsooner did in Massachusetts
@@ -62,17 +63,6 @@ window.WME_Validator_United_States = {
   "112.enabled": false,
   "112.params": {
   "n": 55,
-  },
-  //130: Custom Script 1: Not working in Oklahoma
-  // disabled due to having rights in other states, it gets somewhat.. preachy.
-  // revisit at a later date if this is useful. -tt
-  "128.enabled": true,
-  "128.params": {
-    "titleEN": "Bad TTS Street name",
-    "problemEN": "Streets that start with St and Dr result in TTS reading Street or Drive",
-    "solutionEN": "Add a period after St or Dr at the beginning of the street name",
-    "template": "${street}#${altStreet[#]}",
-    "regexp": "/^St |^Dr /"
   },
   //150: Freeway Locks - "n": # (Where # = actual lock level)
   "150.enabled": true,
