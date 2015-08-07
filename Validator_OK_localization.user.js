@@ -47,6 +47,9 @@ window.WME_Validator_United_States = {
   ".updated": "2015-07-12",
   ".link": "https://greasyfork.org/en/scripts/10930-wme-validator-oklahoma-localization",
  
+  // 27: no city name on railroad
+  "27.enabled": true,
+  
   "112.enabled": false,
   "112.params": {
   "n": 55,
@@ -54,6 +57,15 @@ window.WME_Validator_United_States = {
   //130: Custom Script 1: Not working in Oklahoma
   // disabled due to having rights in other states, it gets somewhat.. preachy.
   // revisit at a later date if this is useful. -tt
+  "128.enabled": true,
+  "128.params": {
+    "titleEN": "Bad TTS Street name",
+    "problemEN": "Streets that start with St and Dr result in TTS reading Street or Drive",
+    "solutionEN": "Add a period after St or Dr at the beginning of the street name",
+    "template": "${street}#${altStreet[#]}",
+    "regexp": "/^St |^Dr /"
+  },
+
   "130.enabled": false,
   "130.params": {
     "titleEN": "Not Oklahoma",
@@ -191,10 +203,19 @@ window.WME_Validator_United_States = {
     "regexp": "/^(Exit: |Exit to )"
   },
   "163.solutionLink": "W:Road_names/USA#Exit_ramps_and_entrance_ramps_.28on-ramps.29",
-  // 171 Incorrectly Abbreviated Street Name
-    "171.enabled": true,
-    "171.params":{
-    "regexp": "/!?[0-9].+(Street|Avenue|Place|Tpke|Turnpike|Circle|South|North|East|West|Northeast|Northwest|Southeast|Southwest|Co Rd|Cord|County Rd|County Road)(! (Ave|Pl))\\b/"
-    }    
+  // 170: Lowercase Street Names, excluding to
+    "170.enabled": true,
+    "170.params": {
+        "regexp": "/^((to) )?[a-z]/",
+    "},
+
+  // 171: Incorrectly Abbreviated Street Name
+  "171.enabled": !0,
+  "171.solutionLink": "W:Abbreviations_&_Acronyms#Standard_Suffix_Abbreviations"
+//    "171.params":{
+//    "regexp": "/!?[0-9].+(Street|Avenue|Place|Tpke|Turnpike|Circle|South|North|East|West|Northeast|Northwest|Southeast|Southwest|Co Rd|Cord|County Rd|County Road)(! (Ave|Pl))\\b/"
+//    }    
+
+ 
     
 };
