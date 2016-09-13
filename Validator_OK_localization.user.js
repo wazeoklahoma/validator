@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name                WME Validator Localization for Oklahoma
+// @name                WME Validator Localization for Oklahoma (Active)
 // @namespace           https://greasyfork.org/en/scripts/10930-wme-validator-oklahoma-localization
-// @version             3.0.19
+// @version             3.0.20
 // @author              turnertr,dBsooner
 // @description         This script localizes WME Validator for United States/Oklahoma. You also need main package (WME Validator) installed.
 // @match               https://editor-beta.waze.com/*editor/*
@@ -17,6 +17,7 @@
 // 1.1.16 -- Enabled some options that were enabled in most states.  Railroads, etc.
 // 1.1.17 -- Merged dBsooner's copy with master
 // 1.1.18 -- Removed extraneous 128 check.
+// 3.0.20 -- Version Change to show this is the newer/version
 
 // TODO:
 // Evaluate Exit detection to make sure it is grabbing all, similar to what dBsooner did in Massachusetts
@@ -81,11 +82,9 @@ window.WME_Validator_United_States = {
 	"n": 3,
   },
   //153: Ramp Locks - "n": # (Where # = actual lock level)
-  //(average ramp will be 5, some 4.  You shouldn't see too many 2/3's, if so we'll ignore the validator)
-  //Changed this to 3, just because there may be SOME, and we don't want it to flag them. There should be no 2's.
   "153.enabled": true,     
   "153.params": {
-    "n": 3,
+    	"n": 5,
   },
   //154: Primary Street Locks - "n": # (Where # = actual lock level)
   "154.enabled": true,
