@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name                WME Validator Localization for Oklahoma (Active)
 // @namespace           https://greasyfork.org/en/scripts/10930-wme-validator-oklahoma-localization
-// @version             3.0.20
+// @version             3.0.21
 // @author              turnertr,dBsooner
 // @description         This script localizes WME Validator for United States/Oklahoma. You also need main package (WME Validator) installed.
 // @match               https://editor-beta.waze.com/*editor/*
@@ -18,6 +18,7 @@
 // 1.1.17 -- Merged dBsooner's copy with master
 // 1.1.18 -- Removed extraneous 128 check.
 // 3.0.20 -- Version Change to show this is the newer/version
+// 3.0.21 -- Changes to SCR Locks.
 
 // TODO:
 // Evaluate Exit detection to make sure it is grabbing all, similar to what dBsooner did in Massachusetts
@@ -84,7 +85,7 @@ window.WME_Validator_United_States = {
   //153: Ramp Locks - "n": # (Where # = actual lock level)
   "153.enabled": true,     
   "153.params": {
-    	"n": 5,
+    	"n": 4,
   },
   //154: Primary Street Locks - "n": # (Where # = actual lock level)
   "154.enabled": true,
@@ -112,7 +113,7 @@ window.WME_Validator_United_States = {
   // CUSTOM CHECKS -- START
 
   // 130: NOT Oklahoma. Good to leave enabled for all. Easier to disable in your local copy, or disable the entire tampermonkey script.
-  "130.enabled": true,
+  "130.enabled": false,
   "130.params": {
 	"titleEN": "Not Oklahoma",
 	"problem": "The segment is assigned to another state",
